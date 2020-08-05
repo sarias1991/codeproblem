@@ -103,6 +103,18 @@ bool bfs(int nodo_i,int nodo_f,int n,vector<int>& ruta,vector<vector<int> >& con
 	return visitado[nodo_f];
 }
 ```
+cuando termine la funcion de maxflow, regresa un valor y se agrega al vector de respuesta.  
+
+cuanto termine de iterar entonces se imprimen las respuesta de cada grafo y su maximo flujo entre ellos.  
+```cpp
+		respuesta.push_back(flujoMaximo);
+	}
+	for(int i=0;i<respuesta.size();i++) {
+		cout << "Network " << i+1 << endl;
+		cout << "The bandwidth is " << respuesta[i] << "." << endl;
+		cout << endl;
+	}
+```
 finalemnte asi queda el codigo completo:  
 
 ```cpp
